@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Credit Card Validator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="card">
+                <div class="layout-box">
+                    <h3 class="card-heading">Order Now</h3>
+                    <hr>
+
+                    <div class="">
+                        <label for="exampleInputEmail1">Credit Card Number :</label>
+                        <div class="form-group input-group">
+                            <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control" placeholder="XXXX  XXXX  XXXX  XXXX" aria-describedby="card-numnber" id="cardnumber" autocomplete="off" maxlength="16">
+                            <span class="input-group-addon" id="basic-addon2">
+                            <span class="validator-label"></span>
+                            <span class="glyphicon glyphicon-ok validator-correct"></span>
+                            <span class="glyphicon glyphicon-remove validator-wrong"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Name on the Card :</label>
+                            <input type="text" class="form-control" placeholder="Please Enter the Name" aria-describedby="name-on-the-card">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <label for="exampleInputEmail1">Expiry Date :</label>
+                            <input type="text" class="form-control" placeholder="MM  /  YY" aria-describedby="expiry-date" id="expiry-date" maxlength="5">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <label for="exampleInputEmail1">CVV :</label>
+                            <input type="password" class="form-control" placeholder="XXX " aria-describedby="CVV" maxlength="3">
+                        </div>
+                        <div class="form-group col-lg-6 col-md-6 col-sm-6"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function test() {
+                console.log("test");
+                console.log(document.getElementById('test').value);
+            };
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="assets/js/script.js"></script>
+</body>
+
+</html>
